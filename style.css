@@ -143,10 +143,15 @@ ul li a {
 .left,.right{
 	max-width: 47%;
 }
+.line{
+	width: 70px;
+	border-top: 4px solid #fdc125;
+}
 .upper{
 	align-items: center;
 }
-.line{
+.banner .upper::before {
+	content: "";
 	width: 70px;
 	border-top: 4px solid #fdc125;
 }
@@ -204,6 +209,12 @@ ul li a {
 	max-width: 23%;
 	padding: 16px;
 	background-color: white;
+	box-shadow: 0 0 10px 4px grey;
+}
+.box::after {
+	content: "";
+	width: 100%;
+	border-top: 4px solid #fdc125;
 }
 
 .box .line {
@@ -220,17 +231,28 @@ ul li a {
 	}
 }
 
+@media  screen and (max-width:1200px) {
+	.wrapper {
+		max-width: 1140px;
+		/* padding: 0 20px; */
+	}
+	.foot-sec {
+		max-width: calc(1140px - 20%);
+		transform: translate(-50%, -10%);
+	}
+}
+
 @media  screen and (max-width:992px) {
 	.wrapper {
 		max-width: 960px;
-		padding: 0 20px;
+		/* padding: 0 20px; */
 	}
 	.foot-sec {
-		max-width: 950px;
-		/* transform: translateY(10%); */
+		max-width: calc(960px - 20%);
+		transform: translate(-50%, -10%);
 	}
 }
-@media  screen and (min-width: 577px) and (max-width:768px) {
+@media  screen and (max-width:768px) {
 	html,body {
 		font-size: 12px;
 	}
@@ -272,7 +294,7 @@ ul li a {
 		padding: 0 20px;
 	}
 	.foot-sec {
-		max-width: 540px;
+		max-width: calc(540px - 20%);
 	}
 	.media100 {
 		max-width: 100%;
