@@ -27,7 +27,7 @@
 
 html,
 body {
-	font-size: 15px;
+	font-size: 16px;
 	font-family: Lato, sans-serif;
 	color: var(--grey);
 }
@@ -110,10 +110,6 @@ ul li a {
 }
 .hamberger {
 	font-size: 27px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 16px;
 	cursor: pointer;
 	display: none;
 }
@@ -123,6 +119,7 @@ ul li a {
 	width: 100%;
 	padding: 40px 0;
 	background-color: var(--deep-blue);
+	opacity: 0.8;
 	display: none;
 }
 .menu ul {
@@ -157,6 +154,18 @@ ul li a {
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
+	background-color: #fdc125;
+}
+.navi ul li {
+	display: inline-block;
+}
+.navi ul li:nth-child(n+2)::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 25px;
 	background-color: #fdc125;
 }
 .right{
@@ -211,13 +220,59 @@ ul li a {
 	}
 }
 
-@media  screen and (max-width:600px) {
+@media  screen and (max-width:992px) {
 	.wrapper {
-		max-width: 500px;
+		max-width: 960px;
 		padding: 0 20px;
 	}
 	.foot-sec {
-		max-width: 500px;
+		max-width: 950px;
+		/* transform: translateY(10%); */
+	}
+}
+@media  screen and (min-width: 577px) and (max-width:768px) {
+	html,body {
+		font-size: 12px;
+	}
+	.wrapper {
+		max-width: 720px;
+		padding: 0 20px;
+	}
+
+	.media50 {
+		max-width: 48%;
+		margin: 15px 0;
+	}
+
+	.foot-sec {
+		max-width: 720px;
+		position: relative; 
+		transform: translateX(-50%);
+	}
+
+	nav {
+		display: none;
+	}
+	.hamberger {
+		max-width: 25%;
+		display: block;
+	}
+	.heading h1 {
+		font-size: 40px;
+	}
+	.heading-foot h1 {
+		font-size: 24px;
+	}
+	
+}
+
+@media  screen and (max-width:576px) {
+	.wrapper {
+		max-width: 540px;
+		padding: 0 20px;
+	}
+	.foot-sec {
+		max-width: 540px;
 	}
 	.media100 {
 		max-width: 100%;
@@ -227,10 +282,24 @@ ul li a {
 		position: relative; 
 		transform: translateX(-50%);
 	}
+	.heading h1 {
+		font-size: 49px;
+	}
+	.img-container {
+		max-width: 35%;
+	}
+	header .primary-button button {
+		padding: 11px 16px;
+	}
+	header .primary-button {
+		gap: 12px;
+	}
 	.hamberger {
+		max-width: 25%;
 		display: block;
 	}
 	nav {
 		display: none;
 	}
 }
+
