@@ -1,0 +1,28 @@
+@use '../base/forward-base' as base;
+
+.hamberger {
+	font-size: 27px;
+	cursor: pointer;
+	display: none;
+}
+.menu {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 40px 0;
+	background-color: base.$deep-blue;
+	opacity: 0.8;
+	display: none;
+}
+.menu ul {
+	align-items: center;
+}
+.menu a {
+  color: base.$white;
+}
+.close {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 30px;
+	color: base.$white;
+}

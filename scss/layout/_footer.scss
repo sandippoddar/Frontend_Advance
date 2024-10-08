@@ -1,0 +1,39 @@
+@use '../base/forward-base' as base;
+
+.foot .container {
+  position: relative;
+}
+
+.cards {
+  width: calc(100% - 20%);
+  max-width: calc(1320px - 20%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.box {
+  max-width: 23%;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px grey;
+  
+  &:hover {
+    background-color: base.$deep-blue;
+
+    .box__heading h2 {
+      color: base.$yellow;
+    }
+
+    p {
+      color: base.$white;
+    }
+  }
+
+  &::after {
+    @include base.line(base.$yellow, 100%) {
+      content: "";
+    }
+  }
+
+}

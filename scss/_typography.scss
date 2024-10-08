@@ -1,0 +1,12 @@
+@font-face {
+	font-family: Bebas_Neue;
+	src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+	font-family: Lato;
+	src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+$font-bebas: Bebas_Neue, sans-serif;
+$font-lato: Lato, sans-serif;

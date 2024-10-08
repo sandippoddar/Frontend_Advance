@@ -1,0 +1,32 @@
+@use '../base/forward-base' as base;
+@use '../modules/button';
+
+.banner__left,
+.banner__right {
+  max-width: 48%;
+}
+
+.banner .upper::before {
+  @include base.line(base.$yellow, 70px) {
+    content: "";
+  }
+}
+.banner__heading h1 {
+  font-size: 3.7rem;
+  letter-spacing: 5px;
+  color: base.$deep-grey;
+}
+.banner__nav ul li:nth-child(n+2)::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 18px;
+  background-color: #fdc125;
+}
+.banner__left .primary-button button {
+	color: base.$white;
+	background-color: base.$deep-blue;
+	border: 1px solid base.$deep-blue;
+}

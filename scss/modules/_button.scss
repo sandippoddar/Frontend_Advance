@@ -1,0 +1,13 @@
+@use '../base/forward-base' as base;
+
+.primary-button button {
+	padding: 15px 30px;
+	background-color: white;
+	border: 1px solid base.$white;
+    border-radius: 27px;
+
+    &:hover {
+        background-color: base.$deep-blue;
+	    @include base.colourSet(base.$white);
+    }
+}

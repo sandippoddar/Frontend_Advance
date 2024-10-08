@@ -1,0 +1,19 @@
+@mixin colourSet($color) {
+  color: $color;
+}
+
+@mixin fontSizeSet($fontSize) {
+  font-size: $fontSize;
+}
+
+@mixin line($color, $width) {
+  @content;
+  width: $width;
+  border-top: 4px solid $color;
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
