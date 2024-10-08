@@ -1,0 +1,267 @@
+@font-face {
+  font-family: Bebas_Neue;
+  src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  color: #666666;
+  word-wrap: break-word;
+}
+
+h1,
+h2 {
+  font-family: Bebas_Neue, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+p {
+  text-align: justify;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+header, .banner {
+  background-color: #ededed;
+  padding: 20px 0;
+}
+
+.hamberger, .menu {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.hamberger {
+  font-size: 27px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #007a82;
+  opacity: 0.8;
+  display: none;
+}
+
+.menu ul {
+  align-items: center;
+}
+
+.menu a {
+  color: #fff;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 30px;
+  color: #fff;
+}
+
+.primary-button button {
+  padding: 15px 30px;
+  background-color: white;
+  border: 1px solid #fff;
+  border-radius: 27px;
+}
+.primary-button button:hover {
+  background-color: #007a82;
+  color: #fff;
+}
+
+.banner__left,
+.banner__right {
+  max-width: 48%;
+}
+
+.banner .upper::before {
+  content: "";
+  width: 70px;
+  border-top: 4px solid #febb0c;
+}
+
+.banner__heading h1 {
+  font-size: 3.7rem;
+  letter-spacing: 5px;
+  color: #3d3d3d;
+}
+
+.banner__nav ul li:nth-child(n+2)::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 18px;
+  background-color: #fdc125;
+}
+
+.banner__left .primary-button button {
+  color: #fff;
+  background-color: #007a82;
+  border: 1px solid #007a82;
+}
+
+.foot .container {
+  position: relative;
+}
+
+.cards {
+  width: 80%;
+  max-width: calc(1320px - 20%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.box {
+  max-width: 23%;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px grey;
+}
+.box:hover {
+  background-color: #007a82;
+}
+.box:hover .box__heading h2 {
+  color: #febb0c;
+}
+.box:hover p {
+  color: #fff;
+}
+.box::after {
+  content: "";
+  width: 100%;
+  border-top: 4px solid #febb0c;
+}
+
+@media screen and (max-width: 1400px) {
+  html, body {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 1320px;
+    padding: 0 20px;
+  }
+  .cards {
+    max-width: calc(1320px - 20%);
+    transform: translate(-50%, -10%);
+  }
+}
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 1140px;
+    padding: 0 20px;
+  }
+  .cards {
+    max-width: calc(1140px - 20%);
+    transform: translate(-50%, -10%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+    padding: 0 20px;
+  }
+  html, body {
+    font-size: 14px;
+  }
+  .cards {
+    max-width: calc(960px - 20%);
+    transform: translate(-50%, -10%);
+  }
+}
+@media screen and (max-width: 768px) {
+  html, body {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 720px;
+    padding: 0 20px;
+  }
+  .media50 {
+    max-width: 48%;
+    margin: 15px 0;
+  }
+  .banner .banner__left, .banner .banner__right {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+  .cards {
+    max-width: calc(720px - 20%);
+    transform: translate(-50%, -10%);
+  }
+  .nav {
+    display: none;
+  }
+  .hamberger {
+    max-width: 25%;
+    display: block;
+  }
+  .navi ul {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+    padding: 0 20px;
+  }
+  html, body {
+    font-size: 12px;
+  }
+  .cards {
+    max-width: calc(540px - 20%);
+    transform: translate(-50%, -7%);
+  }
+  .media100 {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+  .img-container {
+    max-width: 31%;
+  }
+  header .primary-button button {
+    padding: 9px 12px;
+  }
+  header .primary-button {
+    gap: 10px;
+  }
+  .hamberger {
+    max-width: 25%;
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
