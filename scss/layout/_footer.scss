@@ -1,4 +1,5 @@
-@use '../base/forward-base' as base;
+
+@use '../importer' as base;
 
 .foot .container {
   position: relative;
@@ -10,30 +11,34 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, -30%);
-}
 
-.box {
-  max-width: 23%;
-  padding: 16px;
-  background-color: white;
-  box-shadow: 0 0 10px 1px grey;
-  
-  &:hover {
-    background-color: base.$deep-blue;
-
-    .box__heading h2 {
-      color: base.$yellow;
+  &__box {
+    max-width: 23%;
+    padding: 16px;
+    background-color: base.$white;
+    box-shadow: 0 0 10px 1px base.$grey;
+    
+    &--title {
+      @extend %spanBlock;
+      @include base.colourSet(base.$deep-blue);
     }
 
-    p {
-      color: base.$white;
+    &:hover {
+      background-color: base.$deep-blue;
+
+      .cards__box--title {
+        @include base.colourSet(base.$yellow);
+      }
+
+      .cards__box--body {
+        @include base.colourSet(base.$white);
+      }
+    }
+
+    &::after {
+      @include base.line(base.$yellow, 100%) {
+        content: "";
+      }
     }
   }
-
-  &::after {
-    @include base.line(base.$yellow, 100%) {
-      content: "";
-    }
-  }
-
 }

@@ -54,6 +54,10 @@ img {
   width: 100%;
 }
 
+.cards__box--title span, .banner__left--title span {
+  display: block;
+}
+
 .hamberger {
   font-size: 27px;
   cursor: pointer;
@@ -101,19 +105,17 @@ img {
   max-width: 48%;
 }
 
-.banner .upper::before {
+.banner__left--upper::before {
   content: "";
   width: 70px;
   border-top: 4px solid #febb0c;
 }
-
-.banner__heading h1 {
+.banner__left--title {
   font-size: 3.7rem;
   letter-spacing: 5px;
   color: #3d3d3d;
 }
-
-.banner__nav ul li:nth-child(n+2)::before {
+.banner__left--nav ul li:nth-child(n+2)::before {
   content: "";
   display: inline-block;
   width: 10px;
@@ -122,8 +124,7 @@ img {
   margin-right: 18px;
   background-color: #fdc125;
 }
-
-.banner__left .primary-button button {
+.banner__left--button button {
   color: #fff;
   background-color: #007a82;
   border: 1px solid #007a82;
@@ -140,35 +141,34 @@ img {
   left: 50%;
   transform: translate(-50%, -30%);
 }
-
-.box {
+.cards__box {
   max-width: 23%;
   padding: 16px;
-  background-color: white;
-  box-shadow: 0 0 10px 1px grey;
+  background-color: #fff;
+  box-shadow: 0 0 10px 1px #666666;
 }
-.box:hover {
+.cards__box--title {
+  color: #007a82;
+}
+.cards__box:hover {
   background-color: #007a82;
 }
-.box:hover .box__heading h2 {
+.cards__box:hover .cards__box--title {
   color: #febb0c;
 }
-.box:hover p {
+.cards__box:hover .cards__box--body {
   color: #fff;
 }
-.box::after {
+.cards__box::after {
   content: "";
   width: 100%;
   border-top: 4px solid #febb0c;
 }
 
 @media screen and (max-width: 1400px) {
-  html, body {
+  html,
+  body {
     font-size: 14px;
-  }
-  .container {
-    max-width: 1320px;
-    padding: 0 20px;
   }
   .cards {
     max-width: calc(1320px - 20%);
@@ -176,12 +176,9 @@ img {
   }
 }
 @media screen and (max-width: 1200px) {
-  html, body {
+  html,
+  body {
     font-size: 14px;
-  }
-  .container {
-    max-width: 1140px;
-    padding: 0 20px;
   }
   .cards {
     max-width: calc(1140px - 20%);
@@ -189,11 +186,8 @@ img {
   }
 }
 @media screen and (max-width: 992px) {
-  .container {
-    max-width: 960px;
-    padding: 0 20px;
-  }
-  html, body {
+  html,
+  body {
     font-size: 14px;
   }
   .cards {
@@ -202,18 +196,16 @@ img {
   }
 }
 @media screen and (max-width: 768px) {
-  html, body {
+  html,
+  body {
     font-size: 12px;
-  }
-  .container {
-    max-width: 720px;
-    padding: 0 20px;
   }
   .media50 {
     max-width: 48%;
     margin: 15px 0;
   }
-  .banner .banner__left, .banner .banner__right {
+  .banner .banner__left,
+  .banner .banner__right {
     max-width: 100%;
     margin: 15px 0;
   }
@@ -228,16 +220,13 @@ img {
     max-width: 25%;
     display: block;
   }
-  .navi ul {
+  .banner__left--nav ul {
     gap: 10px;
   }
 }
 @media screen and (max-width: 576px) {
-  .container {
-    max-width: 540px;
-    padding: 0 20px;
-  }
-  html, body {
+  html,
+  body {
     font-size: 12px;
   }
   .cards {
