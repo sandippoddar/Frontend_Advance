@@ -1,0 +1,48 @@
+@use './variables' as var;
+@use '../typography' as font;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: var.$font-size-root;
+  font-family: font.$font-lato;
+  color: var.$grey;
+  word-wrap: break-word;
+}
+
+h1,
+h2 {
+  font-family: font.$font-bebas;
+  text-transform: uppercase;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+p {
+  text-align: justify;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+header, .banner {
+  background-color: var.$light-white;
+  padding: 20px 0;
+}
+
+.hamberger, .menu {
+  display: none;
+}
+img {
+  width: 100%;
+}

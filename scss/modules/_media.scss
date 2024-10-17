@@ -1,0 +1,118 @@
+@use '../importer' as base;
+
+
+@include base.media(1400px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .cards {
+    max-width: calc(map-get($map: base.$container-max-widths, $key: xxl) - 20%);
+    transform: translate(-50%, -10%);
+  }
+}
+
+@include base.media(1200px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .cards {
+    max-width: calc(map-get($map: base.$container-max-widths, $key: xl) - 20%);
+    transform: translate(-50%, -10%);
+  }
+}
+
+@include base.media(992px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  .cards {
+    max-width: calc(map-get($map: base.$container-max-widths, $key: lg) - 20%);
+    transform: translate(-50%, -10%);
+  }
+}
+
+@include base.media(768px) {
+
+  html,
+  body {
+    font-size: 12px;
+  }
+
+  .media50 {
+    max-width: 48%;
+    margin: 15px 0;
+  }
+
+  .banner .banner__left,
+  .banner .banner__right {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .cards {
+    max-width: calc(map-get($map: base.$container-max-widths, $key: md) - 20%);
+    transform: translate(-50%, -10%);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamberger {
+    max-width: 25%;
+    display: block;
+  }
+
+  .banner__left--nav ul {
+    gap: 10px;
+  }
+
+}
+
+@include base.media(576px) {
+
+  html,
+  body {
+    font-size: 12px;
+  }
+
+  .cards {
+    max-width: calc(map-get($map: base.$container-max-widths, $key: sm) - 20%);
+    transform: translate(-50%, -7%);
+  }
+
+  .media100 {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .img-container {
+    max-width: 31%;
+  }
+
+  header .primary-button button {
+    padding: 9px 12px;
+  }
+
+  header .primary-button {
+    gap: 10px;
+  }
+
+  .hamberger {
+    max-width: 25%;
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+}
